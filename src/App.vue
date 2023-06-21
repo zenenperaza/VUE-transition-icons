@@ -3,7 +3,7 @@
   <button v-on:click="addNotes">Add Note</button>
   <input type="text" v-model="note">
   <TransitionGroup name="list" tag="ul">
-    <li v-for="note in notes" :key="note"> <v-icon name="pi-charizard-shiny"/> {{ note }} </li>
+    <li v-for="note in notes" :key="note"> <v-icon name="pi-charizard-shiny" scale="4" animation="wrench" hover="true"/> {{ note }} </li>
   </TransitionGroup>
 
 
@@ -12,7 +12,6 @@
 
 <script lang="ts" setup>
 import { ref } from "vue"
-import { GiExitDoor } from "oh-vue-icons/icons";
 
 const note = ref('')
 const notes = ref([])
